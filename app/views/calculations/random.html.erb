@@ -1,0 +1,12 @@
+<div class="row">
+  <h1>Random Number</h1>
+  <% if @min < @max %>
+    <p>
+      A random number between <%= @min %> and <%= @max %> is <%= rand(@min..@max) %>.
+    </p>
+  <% else %>
+    <p>
+      A random number between <%= @max %> and <%= @min %> is <%= rand(@max..@min) %>.
+    </p>
+  <% end %>
+</div>

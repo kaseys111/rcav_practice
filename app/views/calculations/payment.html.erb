@@ -1,0 +1,15 @@
+<div class="row">
+  <h1>Monthly Payment</h1>
+  <p>
+    A <%= @year %> year loan of $<%= @principal.to_i %>, with an annual interest rate of <%= @interest %>%, requires a monthly payment of
+    <% if @year == 0 || @interest == 0 %>
+      $<%= @principal %>.
+     <% else %>
+      <% if @monthly_payment.round(2) == @monthly_payment.round(1) %>
+        $<%=@monthly_payment.round(1) %>0.
+      <% else %>
+        $<%= @monthly_payment.round(2) %>.
+      <% end %>
+    <% end %>
+  </p>
+</div>
